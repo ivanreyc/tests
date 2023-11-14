@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU BELU</title>
+</head>
+<body>
+
+<script>
+  // Obtener la fecha actual
+  var fechaActual = new Date();
+
+  // Obtener día, mes y año
+  var dia = fechaActual.getDate();
+  var mes = fechaActual.getMonth() + 1; // ¡Recuerda que los meses van de 0 a 11!
+  var anio = fechaActual.getFullYear();
+
+  // Calcular la fecha del día siguiente
+  var fechaSiguiente = new Date(anio, mes - 1, dia + 1);
+
+  // Obtener día, mes y año del día siguiente
+  var diaSiguiente = fechaSiguiente.getDate();
+  var mesSiguiente = fechaSiguiente.getMonth() + 1; // ¡Recuerda que los meses van de 0 a 11!
+  var anioSiguiente = fechaSiguiente.getFullYear();
+
+  // Formatear la fecha del día siguiente como dd-mm-aaaa
+  var fechaFormateada = diaSiguiente + '-' + mesSiguiente + '-' + anioSiguiente;
+
+  // Construir la URL con la fecha formateada
+  var url = 'https://cateringbelu.com/televes-general-' + fechaFormateada;
+
+  // Redirigir a la URL construida
+  window.location.href = url;
+</script>
+
+</body>
+</html>
