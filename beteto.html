@@ -25,7 +25,7 @@
   var anioSiguiente = fechaSiguiente.getFullYear();
 
   // Formatear la fecha del día siguiente como dd-mm-aaaa
-  var fechaFormateada = diaSiguiente + '-' + mesSiguiente + '-' + anioSiguiente;
+  var fechaFormateada = diaSiguiente.toString().padStart(2, '0') + '-' + mesSiguiente.toString().padStart(2, '0') + '-' + anioSiguiente;
 
   // Construir la URL con la fecha formateada
   var url = 'https://cateringbelu.com/televes-general-' + fechaFormateada;
